@@ -32,8 +32,8 @@ html {
     --default: hsl(210 5.56% 92.94%) !important;
     --focus: hsl(212.01999999999998 100% 46.67%) !important;
     --overlay: hsl(0 0% 0%) !important;
-    --separator: hsl(0 0% 100%) !important;
-    --separator-opacity: 0.15 !important;
+    --border: hsl(0 0% 100%) !important;
+    --border-opacity: 0.15 !important;
     --surface: hsl(240 5.88% 10%) !important;
     --surface-foreground: hsl(0 0% 98.04%) !important;
     --surface-secondary: hsl(240 3.7% 15.88%) !important;
@@ -114,7 +114,7 @@ html {
     --danger-900: hsl(7 72% 60%) !important;
     --danger-foreground: hsl(0 0% 100%) !important;
     --danger: hsl(7 72% 60%) !important;
-    --separator-width: 1px !important;
+    --border-width: 1px !important;
     --disabled-opacity: .5 !important;
     --text-tiny: 0.75rem !important;
     --text-small: 0.875rem !important;
@@ -127,9 +127,9 @@ html {
     --radius-sm: 8px !important;
     --radius-md: 12px !important;
     --radius-lg: 14px !important;
-    --border-width-small: 1px !important;
-    --border-width-medium: 2px !important;
-    --border-width-large: 3px !important;
+    --border-width-sm: 1px !important;
+    --border-width-md: 2px !important;
+    --border-width-lg: 3px !important;
     --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05), 0px 2px 10px 0px rgb(0 0 0 / 0.2), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --app-shadow-md: 0px 0px 15px 0px rgb(0 0 0 / 0.06), 0px 2px 30px 0px rgb(0 0 0 / 0.22), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --app-shadow-lg: 0px 0px 30px 0px rgb(0 0 0 / 0.07), 0px 30px 60px 0px rgb(0 0 0 / 0.26), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;

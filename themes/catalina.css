@@ -53,7 +53,7 @@
     --default-800: hsl(0 0% 95%) !important;
     --default-900: hsl(0 0% 98%) !important;
     --default: hsl(0 0% 100%) !important;
-    --separator-opacity: 0 !important;
+    --border-opacity: 0 !important;
     --surface: hsl(0 0% 19%) !important;
     --surface-secondary: hsl(0 0% 25%) !important;
     --surface-tertiary: hsl(0 0% 27%) !important;
@@ -103,7 +103,7 @@
     --default-800: hsl(0 0% 15%) !important;
     --default-900: hsl(0 0% 10%) !important;
     --default: hsl(0 0% 15%) !important;
-    --separator-opacity: 0 !important;
+    --border-opacity: 0 !important;
     --surface: hsl(0 0% 95%) !important;
     --surface-secondary: hsl(0 0% 92%) !important;
     --surface-tertiary: hsl(0 0% 87%) !important;

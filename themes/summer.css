@@ -6,9 +6,9 @@
   --secondary: hsl(100 55% 42%) !important;
       --default: hsl(210 50% 10%) !important;
   --default-foreground: hsl(210 50% 10%) !important;
-  --separator-opacity: 0.08 !important;
-  --border-width-small: 1px !important;
-  --border-width-large: 1px !important;
+  --border-opacity: 0.08 !important;
+  --border-width-sm: 1px !important;
+  --border-width-lg: 1px !important;
     --app-shadow-sm: none !important;
   --app-shadow-md: none !important;
   --app-shadow-lg: none !important;
@@ -23,9 +23,9 @@
   --secondary: hsl(100 55% 38%) !important;
     --default: hsl(210 20% 95%) !important;
   --default-foreground: hsl(210 20% 95%) !important;
-  --separator-opacity: 0.08 !important;
-  --border-width-small: 1px !important;
-  --border-width-large: 1px !important;
+  --border-opacity: 0.08 !important;
+  --border-width-sm: 1px !important;
+  --border-width-lg: 1px !important;
     --app-shadow-sm: none !important;
   --app-shadow-md: none !important;
   --app-shadow-lg: none !important;

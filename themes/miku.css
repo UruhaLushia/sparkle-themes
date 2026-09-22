@@ -43,7 +43,6 @@
     --accent-foreground: #ffffff !important;
 
     /* 边框与分割线 (极细微的白色) */
-    --separator: rgba(255, 255, 255, 0.2) !important;
     --border: rgba(255, 255, 255, 0.3) !important;
 
     /* 字体颜色 (深灰，保证在亮色玻璃上的可读性) */

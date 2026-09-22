@@ -18,7 +18,7 @@
 
 .sticky,
 [data-orientation="vertical"] {
-    --separator-opacity: 0.15 !important;
+    --border-opacity: 0.15 !important;
 }
 
 label:not([data-selected])>span.items-center {
@@ -67,8 +67,8 @@ label[data-selected="true"]>span>span {
 }
 
 .floating-bg {
-    --separator-opacity: 0.15 !important;
-    border: 1px solid color-mix(in srgb, var(--separator) calc(var(--separator-opacity) * 100%), transparent) !important;
+    --border-opacity: 0.15 !important;
+    border: 1px solid color-mix(in srgb, var(--border) calc(var(--border-opacity) * 100%), transparent) !important;
 }
 
 .side .grid>div>div:not(.bg-primary):hover {
@@ -89,7 +89,7 @@ label[data-selected="true"]>span>span {
     --default-800: hsl(0 0% 80%) !important;
     --default-900: hsl(0 0% 90%) !important;
     --default: hsl(0 0% 100%) !important;
-    --separator-opacity: 0 !important;
+    --border-opacity: 0 !important;
     --surface: hsl(0 0% 17%) !important;
     --surface-secondary: hsl(0 0% 21%) !important;
     --surface-tertiary: hsl(0 0% 25%) !important;
@@ -111,7 +111,7 @@ label[data-selected="true"]>span>span {
     --accent-300: hsl(200 100% 65%) !important;
     --accent-400: hsl(200 100% 65%) !important;
     --accent-500: hsl(200 100% 65%) !important;
-    --accent-600: hsl(2200 100% 65%) !important;
+    --accent-600: hsl(200 100% 65%) !important;
     --accent-700: hsl(200 100% 65%) !important;
     --accent-800: hsl(200 100% 65%) !important;
     --accent-900: hsl(200 100% 65%) !important;
@@ -164,7 +164,7 @@ label[data-selected="true"]>span>span {
     --default-800: hsl(0 0% 30%) !important;
     --default-900: hsl(0 0% 20%) !important;
     --default: hsl(0 0% 0%) !important;
-    --separator-opacity: 0 !important;
+    --border-opacity: 0 !important;
     --surface: hsl(0 0% 98%) !important;
     --surface-secondary: hsl(0 0% 95%) !important;
     --surface-tertiary: hsl(0 0% 90%) !important;

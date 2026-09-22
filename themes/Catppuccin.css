@@ -31,8 +31,8 @@
     /* Utility colors */
     --overlay: hsl(220 23% 95%) !important; /* Base with opacity */
     --focus: hsl(220 91% 54%) !important; /* Blue */
-    --separator: hsl(234 16% 35%) !important; /* Text */
-    --separator-opacity: 0.15 !important;
+    --border: hsl(234 16% 35%) !important; /* Text */
+    --border-opacity: 0.15 !important;
 
     /* Brand colors */
     /* Default - using Surface colors */
@@ -150,8 +150,8 @@
     /* Utility colors */
     --overlay: hsl(240 21% 15%) !important; /* Base with opacity */
     --focus: hsl(217 92% 76%) !important; /* Blue */
-    --separator: hsl(226 64% 88%) !important; /* Text */
-    --separator-opacity: 0.15 !important;
+    --border: hsl(226 64% 88%) !important; /* Text */
+    --border-opacity: 0.15 !important;
 
     /* Brand colors */
     /* Default - using Surface colors */

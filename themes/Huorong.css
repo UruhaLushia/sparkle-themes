@@ -35,9 +35,9 @@
   --default-600: hsl(31 30% 65%) !important;
   --default: hsl(31 30% 35%) !important;
   --default-foreground: hsl(31 30% 35%) !important;
-  --separator-opacity: 0.1 !important;
-  --border-width-small: 1px !important;
-  --border-width-large: 1px !important;
+  --border-opacity: 0.1 !important;
+  --border-width-sm: 1px !important;
+  --border-width-lg: 1px !important;
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
@@ -74,9 +74,9 @@
   --default-600: hsl(31 30% 60%) !important;
   --default: hsl(31 30% 75%) !important;
   --default-foreground: hsl(31 30% 85%) !important;
-  --separator-opacity: 0.1 !important;
-  --border-width-small: 1px !important;
-  --border-width-large: 1px !important;
+  --border-opacity: 0.1 !important;
+  --border-width-sm: 1px !important;
+  --border-width-lg: 1px !important;
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;

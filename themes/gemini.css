@@ -75,8 +75,8 @@
   --default: hsl(var(--gemini-color-grey-500-hsl)) !important;
   --focus: hsl(240 5.2% 33.92%) !important;
   --overlay: hsl(0 0% 0%) !important;
-  --separator: hsl(0 0% 100%) !important;
-  --separator-opacity: 0.15 !important;
+  --border: hsl(0 0% 100%) !important;
+  --border-opacity: 0.15 !important;
   --surface: hsl(240 5.88% 10%) !important;
   --surface-foreground: hsl(0 0% 98.04%) !important;
   --surface-secondary: hsl(240 3.7% 15.88%) !important;
@@ -169,7 +169,7 @@
   --danger-900: hsl(339 92% 95.1%) !important;
   --danger-foreground: hsl(0 0% 100%) !important;
   --danger: hsl(339 90.36% 51.18%) !important;
-  --separator-width: 1px !important;
+  --border-width: 1px !important;
   --disabled-opacity: 0.5 !important;
   --text-tiny: 0.75rem !important;
   --text-small: 0.875rem !important;
@@ -182,9 +182,9 @@
   --radius-sm: 8px !important;
   --radius-md: 12px !important;
   --radius-lg: 14px !important;
-  --border-width-small: 1px !important;
-  --border-width-medium: 2px !important;
-  --border-width-large: 3px !important;
+  --border-width-sm: 1px !important;
+  --border-width-md: 2px !important;
+  --border-width-lg: 3px !important;
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -238,8 +238,8 @@
   --default-800: hsl(var(--gemini-color-grey-800-hsl)) !important;
   --default-900: hsl(var(--gemini-color-grey-900-hsl)) !important;
   --default: hsl(var(--gemini-color-grey-500-hsl)) !important;
-  --separator: hsl(0 0% 6.67%) !important;
-  --separator-opacity: 0.15 !important;
+  --border: hsl(0 0% 6.67%) !important;
+  --border-opacity: 0.15 !important;
   --focus: hsl(212 100% 46.67%) !important;
   --overlay: hsl(0 0% 0%) !important;
   --surface: hsl(0 0% 100%) !important;
@@ -334,7 +334,7 @@
   --danger-900: hsl(340 84.91% 10.39%) !important;
   --danger-foreground: hsl(0 0% 100%) !important;
   --danger: hsl(339 90.36% 51.18%) !important;
-  --separator-width: 1px !important;
+  --border-width: 1px !important;
   --disabled-opacity: 0.5 !important;
   --text-tiny: 0.75rem !important;
   --text-small: 0.875rem !important;
@@ -347,9 +347,9 @@
   --radius-sm: 8px !important;
   --radius-md: 12px !important;
   --radius-lg: 14px !important;
-  --border-width-small: 1px !important;
-  --border-width-medium: 2px !important;
-  --border-width-large: 3px !important;
+  --border-width-sm: 1px !important;
+  --border-width-md: 2px !important;
+  --border-width-lg: 3px !important;
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.02),
     0px 2px 10px 0px rgb(0 0 0 / 0.06), 0px 0px 1px 0px rgb(0 0 0 / 0.3) !important;
   --app-shadow-md: 0px 0px 15px 0px rgb(0 0 0 / 0.03),
