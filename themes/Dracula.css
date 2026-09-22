@@ -2,27 +2,27 @@
 
 .light,
 [data-theme="light"] {
-  --heroui-background: 250 100% 96% !important;
-  --heroui-default-foreground: 265 89.5% 10% !important;
-  --heroui-foreground: 265 89.5% 10% !important;
+  --background: hsl(250 100% 96%) !important;
+  --default-foreground: hsl(265 89.5% 10%) !important;
+  --default: hsl(265 89.5% 10%) !important;
 }
 
 .dark,
 [data-theme="dark"] {
-  --heroui-background: 235 14.3% 15.1% !important;
-  --heroui-default: 233 13% 39% !important;
-  --heroui-default-100: 232 13.9% 31% !important;
-  --heroui-default-200: 233 13% 39% !important;
-  --heroui-content1: 231 14.9% 18.4% !important;
-  --heroui-content2: 230 14.8% 23.9% !important;
-  --heroui-default-foreground: 265 89.5% 95% !important;
-  --heroui-foreground: 265 89.5% 95% !important;
+  --background: hsl(235 14.3% 15.1%) !important;
+  --default: hsl(233 13% 39%) !important;
+  --default-100: hsl(232 13.9% 31%) !important;
+  --default-200: hsl(233 13% 39%) !important;
+  --surface: hsl(231 14.9% 18.4%) !important;
+  --surface-secondary: hsl(230 14.8% 23.9%) !important;
+  --default-foreground: hsl(265 89.5% 95%) !important;
+  --default: hsl(265 89.5% 95%) !important;
 }
 
 html {
-  --heroui-primary: 265 89.5% 77.6% !important;
-  --heroui-secondary: 330 100% 73.7% !important;
-  --heroui-success: 135 94.4% 64.7% !important;
-  --heroui-warning: 30 100% 66.9% !important;
-  --heroui-danger: 3 68.7% 58.6% !important;
+  --accent: hsl(265 89.5% 77.6%) !important;
+  --secondary: hsl(330 100% 73.7%) !important;
+  --success: hsl(135 94.4% 64.7%) !important;
+  --warning: hsl(30 100% 66.9%) !important;
+  --danger: hsl(3 68.7% 58.6%) !important;
 }

@@ -1,19 +1,5 @@
-## Mihomo Party 主题
+## Sparkle Themes
 
-> --heroui-xxx 变量必须是hsl色值
+主题文件直接覆盖 Sparkle（HeroUI 3）的设计变量。颜色变量使用完整 CSS 颜色值，例如 `hsl(...)`、`rgb(...)`、十六进制颜色或渐变；不要再使用旧版 `--heroui-*` 变量。
 
-```css
-/* 主题名 */
-
-/* 浅色 */
-.light, [data-theme="light"] {
-  --heroui-primary: 331.85 69.23% 77.06% !important;
-  --heroui-secondary: 157.58000000000004 47.15% 62.16% !important;
-}
-
-/* 深色 */
-.dark, [data-theme="dark"] {
-  --heroui-primary: 331.85 69.23% 77.06% !important;
-  --heroui-secondary: 157.58000000000004 47.15% 62.16% !important;
-}
-```
+每个 CSS 文件首行的注释会作为主题名称。发布工作流会把 `themes/` 打包成 `themes.zip`，供 Sparkle 下载。

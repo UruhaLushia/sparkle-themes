@@ -2,29 +2,29 @@
 
 .light,
 [data-theme="light"] {
-  --heroui-primary: 90 60% 60% !important;
-  --heroui-secondary: 100 60% 40% !important;
-  --heroui-content1: 80 30% 100% !important;
-  --heroui-content2: 80 30% 92% !important;
-  --heroui-content3: 80 30% 90% !important;
-  --heroui-content4: 80 30% 85% !important;
-  --heroui-default: 80 30% 85% !important;
-  --heroui-default-50: 80 30% 100% !important;
-  --heroui-default-100: 80 30% 95% !important;
-  --heroui-default-200: 80 30% 85% !important;
-  --heroui-default-300: 80 30% 80% !important;
-  --heroui-default-400: 80 30% 85% !important;
-  --heroui-default-500: 80 30% 70% !important;
-  --heroui-default-600: 80 30% 65% !important;
-  --heroui-foreground: 80 30% 35% !important;
-  --heroui-default-foreground: 80 30% 35% !important;
-  --heroui-divider-opacity: 0.1 !important;
-  --heroui-border-width-small: 1px !important;
-  --heroui-border-width-large: 1px !important;
-  --heroui-box-shadow-small: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-box-shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-box-shadow-large: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-background: 80 20% 96% !important;
+  --accent: hsl(90 60% 60%) !important;
+  --secondary: hsl(100 60% 40%) !important;
+  --surface: hsl(80 30% 100%) !important;
+  --surface-secondary: hsl(80 30% 92%) !important;
+  --surface-tertiary: hsl(80 30% 90%) !important;
+  --surface-tertiary: hsl(80 30% 85%) !important;
+  --default: hsl(80 30% 85%) !important;
+  --default-50: hsl(80 30% 100%) !important;
+  --default-100: hsl(80 30% 95%) !important;
+  --default-200: hsl(80 30% 85%) !important;
+  --default-300: hsl(80 30% 80%) !important;
+  --default-400: hsl(80 30% 85%) !important;
+  --default-500: hsl(80 30% 70%) !important;
+  --default-600: hsl(80 30% 65%) !important;
+  --default: hsl(80 30% 35%) !important;
+  --default-foreground: hsl(80 30% 35%) !important;
+  --separator-opacity: 0.1 !important;
+  --border-width-small: 1px !important;
+  --border-width-large: 1px !important;
+  --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --background: hsl(80 20% 96%) !important;
   /* 自定义变量 */
   --custom-primary-background: linear-gradient(
     135deg,
@@ -41,29 +41,29 @@
 
 .dark,
 [data-theme="dark"] {
-  --heroui-primary: 90 60% 60% !important;
-  --heroui-secondary: 100 60% 40% !important;
-  --heroui-content1: 80 30% 30% !important;
-  --heroui-content2: 80 30% 35% !important;
-  --heroui-content3: 80 30% 40% !important;
-  --heroui-content4: 80 30% 45% !important;
-  --heroui-default: 80 30% 40% !important;
-  --heroui-default-50: 80 30% 30% !important;
-  --heroui-default-100: 80 30% 35% !important;
-  --heroui-default-200: 80 30% 40% !important;
-  --heroui-default-300: 80 30% 45% !important;
-  --heroui-default-400: 80 30% 50% !important;
-  --heroui-default-500: 80 30% 55% !important;
-  --heroui-default-600: 80 30% 60% !important;
-  --heroui-foreground: 80 30% 85% !important;
-  --heroui-default-foreground: 80 30% 85% !important;
-  --heroui-divider-opacity: 0.1 !important;
-  --heroui-border-width-small: 1px !important;
-  --heroui-border-width-large: 1px !important;
-  --heroui-box-shadow-small: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-box-shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-box-shadow-large: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
-  --heroui-background: 80 20% 15% !important;
+  --accent: hsl(90 60% 60%) !important;
+  --secondary: hsl(100 60% 40%) !important;
+  --surface: hsl(80 30% 30%) !important;
+  --surface-secondary: hsl(80 30% 35%) !important;
+  --surface-tertiary: hsl(80 30% 40%) !important;
+  --surface-tertiary: hsl(80 30% 45%) !important;
+  --default: hsl(80 30% 40%) !important;
+  --default-50: hsl(80 30% 30%) !important;
+  --default-100: hsl(80 30% 35%) !important;
+  --default-200: hsl(80 30% 40%) !important;
+  --default-300: hsl(80 30% 45%) !important;
+  --default-400: hsl(80 30% 50%) !important;
+  --default-500: hsl(80 30% 55%) !important;
+  --default-600: hsl(80 30% 60%) !important;
+  --default: hsl(80 30% 85%) !important;
+  --default-foreground: hsl(80 30% 85%) !important;
+  --separator-opacity: 0.1 !important;
+  --border-width-small: 1px !important;
+  --border-width-large: 1px !important;
+  --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
+  --background: hsl(80 20% 15%) !important;
   /* 自定义变量 */
   --custom-primary-background: linear-gradient(
     135deg,
@@ -80,16 +80,16 @@
 
 /* 下拉菜单保持默认阴影 */
 [data-slot="content"] {
-  --heroui-box-shadow-small: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
+  --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
-  --heroui-box-shadow-medium: 0px 0px 15px 0px rgb(0 0 0 / 0.06),
+  --app-shadow-md: 0px 0px 15px 0px rgb(0 0 0 / 0.06),
     0px 2px 30px 0px rgb(0 0 0 / 0.22),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
-  --heroui-box-shadow-large: 0px 0px 30px 0px rgb(0 0 0 / 0.07),
+  --app-shadow-lg: 0px 0px 30px 0px rgb(0 0 0 / 0.07),
     0px 30px 60px 0px rgb(0 0 0 / 0.26),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
-  --heroui-hover-opacity: 0.9 !important;
+  --hover-opacity: 0.9 !important;
 }
 
 .bg-primary {

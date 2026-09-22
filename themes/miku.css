@@ -27,28 +27,28 @@
     /* 玻璃底色：纯白 */
 
     /* --- HeroUI 变量覆盖 (透明度与颜色) --- */
-    --heroui-background: transparent !important;
+    --background: transparent !important;
     --titlebar-area-background: transparent !important;
 
     /* 内容层级背景 (高透设定) */
-    --heroui-content1: var(--glass-base) / 0.25 !important;
+    --surface: rgb(var(--glass-base) / 0.25) !important;
     /* 卡片背景 */
-    --heroui-content2: var(--glass-base) / 0.35 !important;
+    --surface-secondary: rgb(var(--glass-base) / 0.35) !important;
     /* 侧边栏/输入框 */
-    --heroui-content3: var(--glass-base) / 0.45 !important;
+    --surface-tertiary: rgb(var(--glass-base) / 0.45) !important;
     /* 悬停状态 */
 
     /* 主色调应用 */
-    --heroui-primary: var(--miku-cyan) !important;
-    --heroui-primary-foreground: #ffffff !important;
+    --accent: hsl(var(--miku-cyan)) !important;
+    --accent-foreground: #ffffff !important;
 
     /* 边框与分割线 (极细微的白色) */
-    --heroui-divider: rgba(255, 255, 255, 0.2) !important;
-    --heroui-border: rgba(255, 255, 255, 0.3) !important;
+    --separator: rgba(255, 255, 255, 0.2) !important;
+    --border: rgba(255, 255, 255, 0.3) !important;
 
     /* 字体颜色 (深灰，保证在亮色玻璃上的可读性) */
-    --heroui-foreground: #1a1a1a !important;
-    --heroui-foreground-500: #4a5568 !important;
+    --default: #1a1a1a !important;
+    --default-500: #4a5568 !important;
 }
 
 /* ==================================================================
@@ -242,7 +242,7 @@ body {
 /* 开关 (Switch) 样式微调 */
 label[data-selected="true"] .bg-default-200,
 label[data-selected="true"] .bg-default {
-    background-color: hsl(var(--heroui-primary)) !important;
+    background-color: var(--accent) !important;
 }
 
 label[data-selected="true"] span {
