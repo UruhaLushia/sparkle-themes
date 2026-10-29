@@ -1,11 +1,11 @@
 /* Adwaita */
 
-.dark .side {
+:is(.dark, [data-theme="dark"]) .side {
     --surface: hsl(0 0% 24%) !important;
     background-color: hsl(var(--side-background)) !important;
 }
 
-.light .side {
+:is(.light, [data-theme="light"]) .side {
     --surface: hsl(0 0% 87%) !important;
     --app-shadow-sm: none !important;
     --app-shadow-md: none !important;
@@ -17,7 +17,7 @@
     background-color: var(--surface-secondary) !important;
 }
 
-[data-slot="content"] {
+:is(.select__popover, .dropdown__popover, .popover, .tooltip, .modal__dialog, .drawer__dialog, .alert-dialog__dialog) {
     --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
         0px 2px 10px 0px rgb(0 0 0 / 0.2),
         inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -28,28 +28,17 @@
         0px 30px 60px 0px rgb(0 0 0 / 0.26),
         inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --hover-opacity: 0.9 !important;
+    --overlay-shadow: var(--app-shadow-md) !important;
 }
 
 .dark, [data-theme="dark"] {
     --side-background: 0 0% 19% !important;
     --background: hsl(0 0% 14%) !important;
-    --default-50: hsl(0 0% 10%) !important;
-    --default-100: hsl(0 0% 15%) !important;
-    --default-200: hsl(0 0% 25%) !important;
-    --default-300: hsl(0 0% 35%) !important;
-    --default-400: hsl(0 0% 45%) !important;
-    --default-500: hsl(0 0% 65%) !important;
-    --default-600: hsl(0 0% 85%) !important;
-    --default-700: hsl(0 0% 90%) !important;
-    --default-800: hsl(0 0% 95%) !important;
-    --default-900: hsl(0 0% 98%) !important;
-    --default: hsl(0 0% 100%) !important;
+    --foreground: hsl(0 0% 100%) !important;
     --border: hsl(0 0% 14%) !important;
-    --border-opacity: 1 !important;
     --surface: hsl(0 0% 21%) !important;
     --surface-secondary: hsl(0 0% 29%) !important;
     --surface-tertiary: hsl(0 0% 33%) !important;
-    --surface-tertiary: hsl(0 0% 35%) !important;
     --default-50: hsl(0 0% 21%) !important;
     --default-100: hsl(0 0% 29%) !important;
     --default-200: hsl(0 0% 33%) !important;
@@ -72,7 +61,7 @@
     --accent-700: hsl(213 76% 55%) !important;
     --accent-800: hsl(213 76% 55%) !important;
     --accent-900: hsl(213 76% 55%) !important;
-    --accent-foreground: hsl(0 0% 100%) !important;
+    --accent-foreground: hsl(0 0% 0%) !important;
     --accent: hsl(213 76% 55%) !important;
     --secondary-50: hsl(285 45% 46%) !important;
     --secondary-100: hsl(285 45% 46%) !important;
@@ -96,7 +85,7 @@
     --success-700: hsl(147 72% 69%) !important;
     --success-800: hsl(147 72% 69%) !important;
     --success-900: hsl(147 72% 69%) !important;
-    --success-foreground: hsl(0 0% 100%) !important;
+    --success-foreground: hsl(0 0% 0%) !important;
     --success: hsl(147 72% 69%) !important;
     --danger-50: hsl(4 100% 77%) !important;
     --danger-100: hsl(4 100% 77%) !important;
@@ -109,34 +98,27 @@
     --danger-800: hsl(4 100% 77%) !important;
     --danger-900: hsl(4 100% 77%) !important;
     --danger: hsl(4 100% 77%) !important;
+    --danger-foreground: hsl(0 0% 0%) !important;
     --radius-sm: 6px !important;
     --radius-md: 8px !important;
     --radius-lg: 12px !important;
     --app-shadow-sm: none !important;
     --app-shadow-md: none !important;
     --app-shadow-lg: none !important;
+    --surface-foreground: var(--foreground) !important;
+    --surface-secondary-foreground: var(--foreground) !important;
+    --surface-tertiary-foreground: var(--foreground) !important;
+    --overlay-foreground: var(--foreground) !important;
 }
 
 .light, [data-theme="light"] {
     --side-background: 0 0% 92% !important;
     --background: hsl(0 0% 98%) !important;
-    --default-50: hsl(0 0% 98%) !important;
-    --default-100: hsl(0 0% 95%) !important;
-    --default-200: hsl(0 0% 90%) !important;
-    --default-300: hsl(0 0% 85%) !important;
-    --default-400: hsl(0 0% 65%) !important;
-    --default-500: hsl(0 0% 45%) !important;
-    --default-600: hsl(0 0% 35%) !important;
-    --default-700: hsl(0 0% 30%) !important;
-    --default-800: hsl(0 0% 25%) !important;
-    --default-900: hsl(0 0% 21%) !important;
-    --default: hsl(0 0% 17%) !important;
+    --foreground: hsl(0 0% 17%) !important;
     --border: hsl(0 0% 88%) !important;
-    --border-opacity: 1 !important;
     --surface: hsl(0 0% 100%) !important;
     --surface-secondary: hsl(0 0% 89%) !important;
     --surface-tertiary: hsl(0 0% 85%) !important;
-    --surface-tertiary: hsl(0 0% 83%) !important;
     --default-50: hsl(0 0% 100%) !important;
     --default-100: hsl(0 0% 89%) !important;
     --default-200: hsl(0 0% 85%) !important;
@@ -158,7 +140,7 @@
     --accent-700: hsl(213 76% 59%) !important;
     --accent-800: hsl(213 76% 59%) !important;
     --accent-900: hsl(213 76% 59%) !important;
-    --accent-foreground: hsl(0 0% 100%) !important;
+    --accent-foreground: hsl(0 0% 0%) !important;
     --accent: hsl(213 76% 59%) !important;
     --secondary-50: hsl(285 45% 46%) !important;
     --secondary-100: hsl(285 45% 46%) !important;
@@ -182,6 +164,7 @@
     --success-800: hsl(150 100% 24%) !important;
     --success-900: hsl(150 100% 24%) !important;
     --success: hsl(150 100% 24%) !important;
+    --success-foreground: hsl(0 0% 100%) !important;
     --danger-50: hsl(0 100% 38%) !important;
     --danger-100: hsl(0 100% 38%) !important;
     --danger-200: hsl(0 100% 38%) !important;
@@ -199,4 +182,8 @@
     --app-shadow-sm: 0px 0px 0px 0px rgb(0 0 0 / 0.02), 0px 2px 10px 0px rgb(0 0 0 / 0.06), 0px 0px 1px 0px rgb(0 0 0 / 0.3) !important;
     --app-shadow-md: 0px 0px 0px 0px rgb(0 0 0 / 0.03), 0px 2px 30px 0px rgb(0 0 0 / 0.08), 0px 0px 1px 0px rgb(0 0 0 / 0.3) !important;
     --app-shadow-lg: 0px 0px 0px 0px rgb(0 0 0 / 0.04), 0px 30px 60px 0px rgb(0 0 0 / 0.12), 0px 0px 1px 0px rgb(0 0 0 / 0.3) !important;
+    --surface-foreground: var(--foreground) !important;
+    --surface-secondary-foreground: var(--foreground) !important;
+    --surface-tertiary-foreground: var(--foreground) !important;
+    --overlay-foreground: var(--foreground) !important;
 }

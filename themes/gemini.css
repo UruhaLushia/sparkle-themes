@@ -1,11 +1,6 @@
 /* Gemini */
 
 :root {
-  --gemini-color-logo-gradient: linear-gradient(90deg,
-      #2079fe 0%,
-      #098efb 33.53%,
-      #ad89eb 70%,
-      #ef4e5e 100%);
   --gemini-color-white: #ffffff;
   --gemini-color-grey-50: #f7f9fd;
   --gemini-color-grey-100: #f0f3f8;
@@ -62,29 +57,16 @@
 .dark,
 [data-theme="dark"] {
   --background: hsl(var(--gemini-color-black-hsl)) !important;
-  --default-50: hsl(var(--gemini-color-grey-900-hsl)) !important;
-  --default-100: hsl(var(--gemini-color-grey-800-hsl)) !important;
-  --default-200: hsl(var(--gemini-color-grey-700-hsl)) !important;
-  --default-300: hsl(var(--gemini-color-grey-600-hsl)) !important;
-  --default-400: hsl(var(--gemini-color-grey-500-hsl)) !important;
-  --default-500: hsl(var(--gemini-color-grey-400-hsl)) !important;
-  --default-600: hsl(var(--gemini-color-grey-300-hsl)) !important;
-  --default-700: hsl(var(--gemini-color-grey-200-hsl)) !important;
-  --default-800: hsl(var(--gemini-color-grey-100-hsl)) !important;
-  --default-900: hsl(var(--gemini-color-grey-50-hsl)) !important;
-  --default: hsl(var(--gemini-color-grey-500-hsl)) !important;
+  --foreground: var(--gemini-color-grey-100) !important;
   --focus: hsl(240 5.2% 33.92%) !important;
-  --overlay: hsl(0 0% 0%) !important;
-  --border: hsl(0 0% 100%) !important;
-  --border-opacity: 0.15 !important;
+  --overlay: var(--surface) !important;
+  --border: color-mix(in srgb, hsl(0 0% 100%) 15%, transparent) !important;
   --surface: hsl(240 5.88% 10%) !important;
   --surface-foreground: hsl(0 0% 98.04%) !important;
   --surface-secondary: hsl(240 3.7% 15.88%) !important;
   --surface-secondary-foreground: hsl(240 4.76% 95.88%) !important;
   --surface-tertiary: hsl(240 5.26% 26.08%) !important;
   --surface-tertiary-foreground: hsl(240 5.88% 90%) !important;
-  --surface-tertiary: hsl(240 5.2% 33.92%) !important;
-  --surface-tertiary-foreground: hsl(240 4.88% 83.92%) !important;
   --default-50: hsl(var(--gemini-color-grey-900-hsl)) !important;
   --default-100: hsl(var(--gemini-color-grey-800-hsl)) !important;
   --default-200: hsl(var(--gemini-color-grey-700-hsl)) !important;
@@ -95,7 +77,7 @@
   --default-700: hsl(var(--gemini-color-grey-200-hsl)) !important;
   --default-800: hsl(var(--gemini-color-grey-100-hsl)) !important;
   --default-900: hsl(var(--gemini-color-grey-50-hsl)) !important;
-  --default-foreground: var(--default-500) !important;
+  --default-foreground: var(--foreground) !important;
   --default: var(--default-200) !important;
   --custom-default-50: var(--gemini-color-grey-900) !important;
   --custom-default-100: var(--gemini-color-grey-800) !important;
@@ -107,7 +89,7 @@
   --custom-default-700: var(--gemini-color-grey-200) !important;
   --custom-default-800: var(--gemini-color-grey-100) !important;
   --custom-default-900: var(--gemini-color-grey-50) !important;
-  --custom-default-foreground: var(--default-500) !important;
+  --custom-default-foreground: var(--foreground) !important;
   --custom-default: var(--custom-default-500) !important;
   --accent-50: hsl(var(--gemini-color-grey-900-hsl)) !important;
   --accent-100: hsl(var(--gemini-color-grey-800-hsl)) !important;
@@ -167,7 +149,7 @@
   --danger-700: hsl(339 90% 80.39%) !important;
   --danger-800: hsl(340 91.84% 90.39%) !important;
   --danger-900: hsl(339 92% 95.1%) !important;
-  --danger-foreground: hsl(0 0% 100%) !important;
+  --danger-foreground: hsl(0 0% 0%) !important;
   --danger: hsl(339 90.36% 51.18%) !important;
   --border-width: 1px !important;
   --disabled-opacity: 0.5 !important;
@@ -182,9 +164,6 @@
   --radius-sm: 8px !important;
   --radius-md: 12px !important;
   --radius-lg: 14px !important;
-  --border-width-sm: 1px !important;
-  --border-width-md: 2px !important;
-  --border-width-lg: 3px !important;
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -199,6 +178,7 @@
   --custom-side-background: rgb(30, 31, 32);
   --custom-bg-mask-background: rgba(0, 0, 0, 0.4);
   --custom-bg-mask-foreground: var(--gemini-color-white);
+  --overlay-foreground: var(--foreground) !important;
 
   .main .content .bg-default,
   .main .bg-primary,
@@ -210,15 +190,15 @@
     background-color: var(--custom-default-100);
   }
 
-  .group[data-selected=true] .group-data-\[selected\=true\]\:bg-primary {
+  .switch[data-selected="true"] .switch__control {
     background-color: var(--gemini-color-gemini-blue);
   }
 
-  .group-data-\[selected\=true\]\:bg-primary {
+  .switch .switch__control {
     background-color: var(--custom-default-400);
   }
 
-  .group-data-\[selected\=true\]\:bg-primary.border-2 {
+  .switch .switch__control.border-2 {
     border-color: transparent !important;
   }
 }
@@ -227,29 +207,16 @@
 [data-theme="light"] {
   color-scheme: light !important;
   --background: hsl(var(--gemini-color-white-hsl)) !important;
-  --default-50: hsl(var(--gemini-color-grey-50-hsl)) !important;
-  --default-100: hsl(var(--gemini-color-grey-100-hsl)) !important;
-  --default-200: hsl(var(--gemini-color-grey-200-hsl)) !important;
-  --default-300: hsl(var(--gemini-color-grey-300-hsl)) !important;
-  --default-400: hsl(var(--gemini-color-grey-400-hsl)) !important;
-  --default-500: hsl(var(--gemini-color-grey-500-hsl)) !important;
-  --default-600: hsl(var(--gemini-color-grey-600-hsl)) !important;
-  --default-700: hsl(var(--gemini-color-grey-700-hsl)) !important;
-  --default-800: hsl(var(--gemini-color-grey-800-hsl)) !important;
-  --default-900: hsl(var(--gemini-color-grey-900-hsl)) !important;
-  --default: hsl(var(--gemini-color-grey-500-hsl)) !important;
-  --border: hsl(0 0% 6.67%) !important;
-  --border-opacity: 0.15 !important;
+  --foreground: var(--gemini-color-gemini-grey-900) !important;
+  --border: color-mix(in srgb, hsl(0 0% 6.67%) 15%, transparent) !important;
   --focus: hsl(212 100% 46.67%) !important;
-  --overlay: hsl(0 0% 0%) !important;
+  --overlay: var(--surface) !important;
   --surface: hsl(0 0% 100%) !important;
   --surface-foreground: hsl(201 24.44% 8.82%) !important;
   --surface-secondary: hsl(240 4.76% 95.88%) !important;
   --surface-secondary-foreground: hsl(240 3.7% 15.88%) !important;
   --surface-tertiary: hsl(240 5.88% 90%) !important;
   --surface-tertiary-foreground: hsl(240 5.26% 26.08%) !important;
-  --surface-tertiary: hsl(240 4.88% 83.92%) !important;
-  --surface-tertiary-foreground: hsl(240 5.2% 33.92%) !important;
   --default-50: hsl(var(--gemini-color-grey-50-hsl)) !important;
   --default-100: hsl(var(--gemini-color-grey-100-hsl)) !important;
   --default-200: hsl(var(--gemini-color-grey-200-hsl)) !important;
@@ -260,7 +227,7 @@
   --default-700: hsl(var(--gemini-color-grey-700-hsl)) !important;
   --default-800: hsl(var(--gemini-color-grey-800-hsl)) !important;
   --default-900: hsl(var(--gemini-color-grey-900-hsl)) !important;
-  --default-foreground: var(--default-500) !important;
+  --default-foreground: var(--foreground) !important;
   --default: var(--default-300) !important;
   --custom-default-50: var(--gemini-color-grey-50) !important;
   --custom-default-100: var(--gemini-color-grey-100) !important;
@@ -272,7 +239,7 @@
   --custom-default-700: var(--gemini-color-grey-700) !important;
   --custom-default-800: var(--gemini-color-grey-800) !important;
   --custom-default-900: var(--gemini-color-grey-900) !important;
-  --custom-default-foreground: var(--default-500) !important;
+  --custom-default-foreground: var(--foreground) !important;
   --custom-default: var(--custom-default-300) !important;
   --accent-50: var(--gemini-color-grey-50) !important;
   --accent-100: hsl(var(--gemini-color-grey-100-hsl)) !important;
@@ -284,7 +251,7 @@
   --accent-700: hsl(var(--gemini-color-grey-700-hsl)) !important;
   --accent-800: hsl(var(--gemini-color-grey-800-hsl)) !important;
   --accent-900: hsl(var(--gemini-color-grey-900-hsl)) !important;
-  --accent-foreground: var(--default-100) !important;
+  --accent-foreground: var(--foreground) !important;
   --accent: hsl(var(--gemini-color-gemini-cyan-hsl)) !important;
   --secondary-50: hsl(270 61.54% 94.9%) !important;
   --secondary-100: hsl(270 59.26% 89.41%) !important;
@@ -298,7 +265,7 @@
   --secondary-900: hsl(270 66.67% 9.41%) !important;
   --secondary-foreground: hsl(0 0% 100%) !important;
   --secondary: hsl(270 66.67% 47.06%) !important;
-  --success-50: 16.42% 64.29% 94.51% !important;
+  --success-50: hsl(146.67 64.29% 94.51%) !important;
   --success-100: hsl(145 61.4% 88.82%) !important;
   --success-200: hsl(146.2 61.74% 77.45%) !important;
   --success-300: hsl(145 62.57% 66.47%) !important;
@@ -332,7 +299,7 @@
   --danger-700: hsl(339 85.99% 30.78%) !important;
   --danger-800: hsl(339 86.54% 20.39%) !important;
   --danger-900: hsl(340 84.91% 10.39%) !important;
-  --danger-foreground: hsl(0 0% 100%) !important;
+  --danger-foreground: hsl(0 0% 0%) !important;
   --danger: hsl(339 90.36% 51.18%) !important;
   --border-width: 1px !important;
   --disabled-opacity: 0.5 !important;
@@ -347,9 +314,6 @@
   --radius-sm: 8px !important;
   --radius-md: 12px !important;
   --radius-lg: 14px !important;
-  --border-width-sm: 1px !important;
-  --border-width-md: 2px !important;
-  --border-width-lg: 3px !important;
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.02),
     0px 2px 10px 0px rgb(0 0 0 / 0.06), 0px 0px 1px 0px rgb(0 0 0 / 0.3) !important;
   --app-shadow-md: 0px 0px 15px 0px rgb(0 0 0 / 0.03),
@@ -360,7 +324,8 @@
   --custom-main-background: rgb(255, 255, 255);
   --custom-side-background: rgb(240, 244, 249);
   --custom-bg-mask-background: rgba(255, 255, 255, 0.4);
-  --custom-bg-mask-foreground: var(--gemini-color-white);
+  --custom-bg-mask-foreground: var(--foreground);
+  --overlay-foreground: var(--foreground) !important;
 
   .main .content .bg-default,
   .main .bg-primary,
@@ -374,28 +339,20 @@
     background: var(--custom-default-50) !important;
   }
 
-  .main .text-primary-foreground,
-  .side .text-primary-foreground,
-  .main .text-foreground,
-  .side .text-foreground,
-  .side .text-primary {
-    color: var(--custom-default-400);
-  }
-
   .main .bg-default-100 {
     background-color: var(--custom-default-50) !important;
   }
 
-  .main .group-data-\[selected\=true\]\:bg-primary .bg-white,
-  .side .group-data-\[selected\=true\]\:bg-primary .bg-white {
+  .main .switch .switch__thumb,
+  .side .switch .switch__thumb {
     background-color: var(--custom-default-50) !important;
   }
 }
 
-.main .title.text-lg.leading-\[32px\],
-.main .h-\[32px\].leading-\[32px\],
+.main .title,
+.main [data-testid="virtuoso-scroller"] .text-lg .flag-emoji,
 .main .text-default-500 .ml-2,
-.font-bold {
+:is(.main, .side) .font-bold {
   background-image: var(--gemini-color-logo-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -427,11 +384,11 @@
   background-color: var(--gemini-color-red-200);
 }
 
-.side .h-\[32px\].leading-\[32px\] {
+.side .sticky h3 {
   color: #2079fe;
 }
 
-.side [data-slot="tabList"] {
+.side .outbound-mode-card {
   background-image: var(--gemini-color-logo-gradient);
 }
 
@@ -442,16 +399,15 @@
   background: var(--custom-default-500);
 }
 
-.main .text-primary-foreground,
-.side .text-primary-foreground,
-.main .text-foreground,
-.side .text-foreground,
-.side .text-primary {
-  color: var(--custom-default-500);
+.main .bg-primary .text-primary-foreground,
+.side .bg-primary .text-primary-foreground,
+.main .bg-primary.text-primary-foreground,
+.side .bg-primary.text-primary-foreground {
+  color: var(--foreground);
 }
 
-.main .group-data-\[selected\=true\]\:bg-primary .bg-white,
-.side .group-data-\[selected\=true\]\:bg-primary .bg-white {
+.main .switch .switch__thumb,
+.side .switch .switch__thumb {
   background-color: var(--custom-side-background) !important;
 }
 
@@ -464,19 +420,19 @@
   background: var(--custom-default-300) !important;
 }
 
-.side [data-slot="tabList"] .bg-primary {
+.side .outbound-mode-card .tabs__indicator {
   background: var(--custom-bg-mask-background);
 }
 
-.side [data-slot="tabList"] [data-slot="tabContent"] {
-  color: var(--custom-bg-mask-foreground);
+.side .outbound-mode-card .tabs__tab {
+  color: var(--gemini-color-gemini-grey-900) !important;
   background-image: none;
   background-clip: initial;
   -webkit-background-clip: initial;
-  -webkit-text-fill-color: var(--custom-bg-mask-foreground);
+  -webkit-text-fill-color: currentColor;
 }
 
-.main [data-slot="tab"] .text-default-500 {
+.main .tabs__tab .text-default-500 {
   color: var(--custom-default-500) !important;
 }
 
@@ -493,10 +449,14 @@
   color: #2079fe !important;
 }
 
-.group[data-selected=true] .group-data-\[selected\=true\]\:bg-primary {
+.switch[data-selected="true"] .switch__control {
   background-color: var(--gemini-color-gemini-blue);
 }
 
-.group-data-\[selected\=true\]\:bg-primary.border-2 {
+.switch .switch__control.border-2 {
   border-color: transparent !important;
+}
+
+.side .outbound-mode-card .tabs__tab[data-selected="true"] {
+  color: var(--custom-bg-mask-foreground) !important;
 }

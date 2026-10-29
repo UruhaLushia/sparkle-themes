@@ -3,11 +3,12 @@
 .light,
 [data-theme="light"] {
   --accent: hsl(330 90% 75%) !important;
+  --accent-foreground: hsl(0 0% 0%) !important;
   --secondary: hsl(340 90% 50%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
   --surface: hsl(330 30% 100%) !important;
   --surface-secondary: hsl(330 30% 92%) !important;
   --surface-tertiary: hsl(330 30% 90%) !important;
-  --surface-tertiary: hsl(330 30% 85%) !important;
   --default: hsl(330 30% 85%) !important;
   --default-50: hsl(330 30% 100%) !important;
   --default-100: hsl(330 30% 95%) !important;
@@ -16,11 +17,8 @@
   --default-400: hsl(330 30% 80%) !important;
   --default-500: hsl(330 30% 75%) !important;
   --default-600: hsl(330 30% 70%) !important;
-  --default: hsl(330 30% 35%) !important;
+  --foreground: hsl(330 30% 35%) !important;
   --default-foreground: hsl(330 30% 35%) !important;
-  --border-opacity: 0.1 !important;
-  --border-width-sm: 1px !important;
-  --border-width-lg: 1px !important;
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
@@ -37,16 +35,22 @@
     hsl(330, 80%, 90%) 0%,
     hsl(330, 80%, 98%) 100%
 );
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --border: color-mix(in srgb, var(--foreground) 10%, transparent) !important;
 }
 
 .dark,
 [data-theme="dark"] {
   --accent: hsl(330 90% 75%) !important;
+  --accent-foreground: hsl(0 0% 0%) !important;
   --secondary: hsl(340 90% 50%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
   --surface: hsl(330 30% 30%) !important;
   --surface-secondary: hsl(330 30% 35%) !important;
   --surface-tertiary: hsl(330 30% 40%) !important;
-  --surface-tertiary: hsl(330 30% 45%) !important;
   --default: hsl(330 30% 40%) !important;
   --default-50: hsl(330 30% 30%) !important;
   --default-100: hsl(330 30% 35%) !important;
@@ -55,11 +59,8 @@
   --default-400: hsl(330 30% 50%) !important;
   --default-500: hsl(330 30% 55%) !important;
   --default-600: hsl(330 30% 60%) !important;
-  --default: hsl(330 30% 85%) !important;
+  --foreground: hsl(330 30% 85%) !important;
   --default-foreground: hsl(330 30% 85%) !important;
-  --border-opacity: 0.1 !important;
-  --border-width-sm: 1px !important;
-  --border-width-lg: 1px !important;
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
@@ -76,10 +77,15 @@
     hsl(330, 40%, 5%) 0%,
     hsl(330, 20%, 15%) 100%
 );
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --border: color-mix(in srgb, var(--foreground) 10%, transparent) !important;
 }
 
 /* 下拉菜单保持默认阴影 */
-[data-slot="content"] {
+:is(.select__popover, .dropdown__popover, .popover, .tooltip, .modal__dialog, .drawer__dialog, .alert-dialog__dialog) {
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -90,6 +96,7 @@
     0px 30px 60px 0px rgb(0 0 0 / 0.26),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
   --hover-opacity: 0.9 !important;
+  --overlay-shadow: var(--app-shadow-md) !important;
 }
 
 .bg-primary {

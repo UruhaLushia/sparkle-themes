@@ -1,16 +1,41 @@
 /* HomoHub */
 
-.side .sticky h3 {
+.side .sticky h3,
+.side.sider-rail > .app-drag > .sider-item-label {
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 0;
+    line-height: 0;
 }
 
-.side .sticky h3::after {
-    content: "Party";
-    padding: 4px;
-    margin-left: calc(-5ch + 4px);
-    color: var(--accent-foreground);
-    background-color: var(--accent);
-    border-radius: var(--radius-sm);
+.side .sticky h3::before,
+.side.sider-rail > .app-drag > .sider-item-label::before {
+    content: "Sparkle" / "";
+    font-size: 1.375rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    color: #fff;
+}
+
+.side .sticky h3::after,
+.side.sider-rail > .app-drag > .sider-item-label::after {
+    content: "hub" / "";
+    font-size: 1.375rem;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    margin-left: 3px;
+    padding: 1px 4px;
+    color: #000;
+    background-color: #ff9000;
+    border-radius: 2px;
+}
+
+.side.sider-rail > .app-drag > .sider-item-label::before,
+.side.sider-rail > .app-drag > .sider-item-label::after {
+    font-size: 1.25rem;
 }
 
 .border-primary-foreground>.bg-white {
@@ -19,29 +44,16 @@
 
 html {
     --background: hsl(0 0% 0%) !important;
-    --default-50: hsl(240 5.88% 10%) !important;
-    --default-100: hsl(240 3.7% 15.88%) !important;
-    --default-200: hsl(240 5.26% 26.08%) !important;
-    --default-300: hsl(240 5.2% 33.92%) !important;
-    --default-400: hsl(240 3.83% 46.08%) !important;
-    --default-500: hsl(240 5.03% 64.9%) !important;
-    --default-600: hsl(240 4.88% 83.92%) !important;
-    --default-700: hsl(240 5.88% 90%) !important;
-    --default-800: hsl(240 4.76% 95.88%) !important;
-    --default-900: hsl(0 0% 98.04%) !important;
-    --default: hsl(210 5.56% 92.94%) !important;
+    --foreground: hsl(210 5.56% 92.94%) !important;
     --focus: hsl(212.01999999999998 100% 46.67%) !important;
-    --overlay: hsl(0 0% 0%) !important;
-    --border: hsl(0 0% 100%) !important;
-    --border-opacity: 0.15 !important;
+    --overlay: var(--surface) !important;
+    --border: color-mix(in srgb, hsl(0 0% 100%) 15%, transparent) !important;
     --surface: hsl(240 5.88% 10%) !important;
     --surface-foreground: hsl(0 0% 98.04%) !important;
     --surface-secondary: hsl(240 3.7% 15.88%) !important;
     --surface-secondary-foreground: hsl(240 4.76% 95.88%) !important;
     --surface-tertiary: hsl(240 5.26% 26.08%) !important;
     --surface-tertiary-foreground: hsl(240 5.88% 90%) !important;
-    --surface-tertiary: hsl(240 5.2% 33.92%) !important;
-    --surface-tertiary-foreground: hsl(240 4.88% 83.92%) !important;
     --default-50: hsl(240 5.88% 10%) !important;
     --default-100: hsl(240 3.7% 15.88%) !important;
     --default-200: hsl(240 5.26% 26.08%) !important;
@@ -112,7 +124,7 @@ html {
     --danger-700: hsl(7 72% 60%) !important;
     --danger-800: hsl(7 72% 60%) !important;
     --danger-900: hsl(7 72% 60%) !important;
-    --danger-foreground: hsl(0 0% 100%) !important;
+    --danger-foreground: hsl(0 0% 0%) !important;
     --danger: hsl(7 72% 60%) !important;
     --border-width: 1px !important;
     --disabled-opacity: .5 !important;
@@ -127,11 +139,9 @@ html {
     --radius-sm: 8px !important;
     --radius-md: 12px !important;
     --radius-lg: 14px !important;
-    --border-width-sm: 1px !important;
-    --border-width-md: 2px !important;
-    --border-width-lg: 3px !important;
     --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05), 0px 2px 10px 0px rgb(0 0 0 / 0.2), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --app-shadow-md: 0px 0px 15px 0px rgb(0 0 0 / 0.06), 0px 2px 30px 0px rgb(0 0 0 / 0.22), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --app-shadow-lg: 0px 0px 30px 0px rgb(0 0 0 / 0.07), 0px 30px 60px 0px rgb(0 0 0 / 0.26), inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
     --hover-opacity: .9 !important;
+    --overlay-foreground: var(--foreground) !important;
 }

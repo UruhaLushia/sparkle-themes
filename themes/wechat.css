@@ -5,16 +5,21 @@
     --surface: hsl(0 0% 10%) !important;
     --surface-secondary: hsl(0 0% 14%) !important;
     --surface-tertiary: hsl(0 0% 18%) !important;
-    --surface-tertiary: hsl(0 0% 22%) !important;
     --default: hsl(0 0% 18%) !important;
     --default-50: hsl(0 0% 10%) !important;
     --default-100: hsl(0 0% 14%) !important;
     --default-200: hsl(0 0% 18%) !important;
     --default-300: hsl(0 0% 22%) !important;
+    --accent-foreground: hsl(0 0% 0%) !important;
+    --secondary-foreground: hsl(0 0% 0%) !important;
+    --danger-foreground: hsl(0 0% 0%) !important;
 }
 
 .light, [data-theme="light"] {
     --background: hsl(0 0% 96%) !important;
+    --accent-foreground: var(--foreground) !important;
+    --secondary-foreground: var(--foreground) !important;
+    --danger-foreground: var(--foreground) !important;
 }
 
 html {

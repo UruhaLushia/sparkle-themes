@@ -20,7 +20,9 @@
 .light,
 [data-theme="light"] {
   --accent: hsl(151 83% 34%) !important;
+  --accent-foreground: var(--foreground) !important;
   --secondary: hsl(151 48% 47%) !important;
+  --secondary-foreground: var(--foreground) !important;
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
@@ -37,13 +39,16 @@
 [data-theme="dark"] {
   --accent: hsl(151 83% 27%) !important;
   --secondary: hsl(150 43% 42%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
+  --custom-main-background: hsl(0 0% 8%);
+  --custom-side-background: linear-gradient(135deg, hsl(151 20% 10%) 30%, hsl(0 0% 8%) 100%);
   --app-shadow-sm: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
   --app-shadow-lg: 0px 4px 10px rgba(0, 0, 0, 0.02) !important;
 }
 
 /* 下拉菜单保持默认阴影 */
-[data-slot="content"] {
+:is(.select__popover, .dropdown__popover, .popover, .tooltip, .modal__dialog, .drawer__dialog, .alert-dialog__dialog) {
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -54,6 +59,7 @@
     0px 30px 60px 0px rgb(0 0 0 / 0.26),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
   --hover-opacity: 0.9 !important;
+  --overlay-shadow: var(--app-shadow-md) !important;
 }
 
 .main {

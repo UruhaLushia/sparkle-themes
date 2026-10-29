@@ -5,7 +5,6 @@
     --surface: hsl(220 6% 10%) !important;
     --surface-secondary: hsl(220 6% 15%) !important;
     --surface-tertiary: hsl(220 6% 20%) !important;
-    --surface-tertiary: hsl(220 6% 25%) !important;
     --default-50: hsl(220 6% 10%) !important;
     --default-100: hsl(220 6% 15%) !important;
     --default-200: hsl(220 6% 25%) !important;
@@ -27,6 +26,7 @@
     --accent-800: hsl(339 61% 57%) !important;
     --accent-900: hsl(339 61% 57%) !important;
     --accent: hsl(339 61% 57%) !important;
+    --accent-foreground: hsl(0 0% 0%) !important;
     --secondary-50: hsl(44 79% 54%) !important;
     --secondary-100: hsl(44 79% 54%) !important;
     --secondary-200: hsl(44 79% 54%) !important;
@@ -37,7 +37,7 @@
     --secondary-700: hsl(44 79% 54%) !important;
     --secondary-800: hsl(44 79% 54%) !important;
     --secondary-900: hsl(44 79% 54%) !important;
-    --secondary-foreground: hsl(0 0% 100%) !important;
+    --secondary-foreground: hsl(0 0% 0%) !important;
     --secondary: hsl(44 79% 54%) !important;
     --warning-50: hsl(17 71% 52%) !important;
     --warning-100: hsl(17 71% 52%) !important;
@@ -61,7 +61,7 @@
     --danger-700: hsl(1 98% 61%) !important;
     --danger-800: hsl(1 98% 61%) !important;
     --danger-900: hsl(1 98% 61%) !important;
-    --danger-foreground: hsl(0 0% 100%) !important;
+    --danger-foreground: hsl(0 0% 0%) !important;
     --danger: hsl(1 98% 61%) !important;
 }
 
@@ -70,7 +70,6 @@
     --surface: hsl(0 0% 95%) !important;
     --surface-secondary: hsl(0 0% 90%) !important;
     --surface-tertiary: hsl(0 0% 85%) !important;
-    --surface-tertiary: hsl(0 0% 80%) !important;
     --default-50: hsl(0 0% 95%) !important;
     --default-100: hsl(0 0% 90%) !important;
     --default-200: hsl(0 0% 85%) !important;
@@ -92,6 +91,7 @@
     --accent-800: hsl(343 94% 72%) !important;
     --accent-900: hsl(343 94% 72%) !important;
     --accent: hsl(343 94% 72%) !important;
+    --accent-foreground: var(--foreground) !important;
     --secondary-50: hsl(44 79% 54%) !important;
     --secondary-100: hsl(44 79% 54%) !important;
     --secondary-200: hsl(44 79% 54%) !important;
@@ -102,7 +102,7 @@
     --secondary-700: hsl(44 79% 54%) !important;
     --secondary-800: hsl(44 79% 54%) !important;
     --secondary-900: hsl(44 79% 54%) !important;
-    --secondary-foreground: hsl(0 0% 100%) !important;
+    --secondary-foreground: var(--foreground) !important;
     --secondary: hsl(44 79% 54%) !important;
     --warning-50: hsl(17 71% 52%) !important;
     --warning-100: hsl(17 71% 52%) !important;
@@ -126,6 +126,6 @@
     --danger-700: hsl(1 98% 61%) !important;
     --danger-800: hsl(1 98% 61%) !important;
     --danger-900: hsl(1 98% 61%) !important;
-    --danger-foreground: hsl(0 0% 100%) !important;
+    --danger-foreground: var(--foreground) !important;
     --danger: hsl(1 98% 61%) !important;
 }

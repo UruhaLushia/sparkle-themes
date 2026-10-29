@@ -4,7 +4,14 @@
 [data-theme="light"] {
   --background: hsl(250 100% 96%) !important;
   --default-foreground: hsl(265 89.5% 10%) !important;
-  --default: hsl(265 89.5% 10%) !important;
+  --foreground: hsl(265 89.5% 10%) !important;
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --accent-foreground: var(--foreground) !important;
+  --secondary-foreground: var(--foreground) !important;
+  --danger-foreground: var(--foreground) !important;
 }
 
 .dark,
@@ -16,7 +23,14 @@
   --surface: hsl(231 14.9% 18.4%) !important;
   --surface-secondary: hsl(230 14.8% 23.9%) !important;
   --default-foreground: hsl(265 89.5% 95%) !important;
-  --default: hsl(265 89.5% 95%) !important;
+  --foreground: hsl(265 89.5% 95%) !important;
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --accent-foreground: hsl(0 0% 0%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
+  --danger-foreground: hsl(0 0% 0%) !important;
 }
 
 html {

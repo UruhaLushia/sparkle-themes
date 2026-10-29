@@ -3,63 +3,68 @@
 .light,
 [data-theme="light"] {
   --accent: hsl(210 80% 55%) !important;
+  --accent-foreground: var(--foreground) !important;
   --secondary: hsl(100 55% 42%) !important;
-      --default: hsl(210 50% 10%) !important;
+  --secondary-foreground: var(--foreground) !important;
+  --foreground: hsl(210 50% 10%) !important;
   --default-foreground: hsl(210 50% 10%) !important;
-  --border-opacity: 0.08 !important;
-  --border-width-sm: 1px !important;
-  --border-width-lg: 1px !important;
-    --app-shadow-sm: none !important;
+  --app-shadow-sm: none !important;
   --app-shadow-md: none !important;
   --app-shadow-lg: none !important;
-      --custom-content1-opacity: 0.75;
+  --custom-content1-opacity: 0.75;
   --custom-content2-opacity: 0.82;
   --custom-background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/18325667651636608');
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --border: color-mix(in srgb, var(--foreground) 8%, transparent) !important;
+  --surface: color-mix(in srgb, hsl(0 0% 100%) calc(var(--custom-content1-opacity) * 100%), transparent) !important;
+  --surface-secondary: color-mix(in srgb, hsl(240 4.76% 95.88%) calc(var(--custom-content2-opacity) * 100%), transparent) !important;
+  --surface-tertiary: color-mix(in srgb, hsl(240 5.88% 90%) calc(var(--custom-content1-opacity) * 100%), transparent) !important;
+  --overlay: hsl(0 0% 100%) !important;
+  --field-background: var(--surface-secondary) !important;
+  --field-hover: var(--surface-tertiary) !important;
 }
 
 .dark,
 [data-theme="dark"] {
   --accent: hsl(210 80% 55%) !important;
+  --accent-foreground: hsl(0 0% 0%) !important;
   --secondary: hsl(100 55% 38%) !important;
-    --default: hsl(210 20% 95%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
+  --foreground: hsl(210 20% 95%) !important;
   --default-foreground: hsl(210 20% 95%) !important;
-  --border-opacity: 0.08 !important;
-  --border-width-sm: 1px !important;
-  --border-width-lg: 1px !important;
-    --app-shadow-sm: none !important;
+  --app-shadow-sm: none !important;
   --app-shadow-md: none !important;
   --app-shadow-lg: none !important;
-    --custom-content1-opacity: 0.75;
+  --custom-content1-opacity: 0.75;
   --custom-content2-opacity: 0.8;
   --custom-background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/18325667651636608');
+  --surface-foreground: var(--foreground) !important;
+  --surface-secondary-foreground: var(--foreground) !important;
+  --surface-tertiary-foreground: var(--foreground) !important;
+  --overlay-foreground: var(--foreground) !important;
+  --border: color-mix(in srgb, var(--foreground) 8%, transparent) !important;
+  --surface: color-mix(in srgb, hsl(240 5.88% 10%) calc(var(--custom-content1-opacity) * 100%), transparent) !important;
+  --surface-secondary: color-mix(in srgb, hsl(240 3.7% 15.88%) calc(var(--custom-content2-opacity) * 100%), transparent) !important;
+  --surface-tertiary: color-mix(in srgb, hsl(240 5.26% 26.08%) calc(var(--custom-content1-opacity) * 100%), transparent) !important;
+  --overlay: hsl(240 5.88% 10%) !important;
+  --field-background: var(--surface-secondary) !important;
+  --field-hover: var(--surface-tertiary) !important;
 }
 
 /* 背景图设在 html 上 */
-html {
-  --background: none !important;
-  background: transparent !important;
+html:has(.main) {
   background-image: var(--custom-background-image) !important;
   background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
-/* 组件透明度 */
-.bg-default,
-.bg-default-100,
-.bg-default-200 {
-  opacity: var(--custom-content1-opacity) !important;
-}
-
-.bg-content1 {
-  opacity: var(--custom-content1-opacity) !important;
-}
-
-.bg-content2 {
-  opacity: var(--custom-content2-opacity) !important;
-}
-
-.bg-primary\/30 {
-  background-color: var(--accent) !important;
-  opacity: var(--custom-content1-opacity) !important;
+/* 背景透明度 */
+.main .bg-primary\/30 {
+  background-color: color-mix(in srgb, var(--accent) calc(var(--custom-content1-opacity) * 100%), transparent) !important;
 }
 
 .main .sticky {
@@ -78,7 +83,7 @@ html {
 }
 
 /* 下拉菜单保持默认阴影 */
-[data-slot="content"] {
+:is(.select__popover, .dropdown__popover, .popover, .tooltip, .modal__dialog, .drawer__dialog, .alert-dialog__dialog) {
   --app-shadow-sm: 0px 0px 5px 0px rgb(0 0 0 / 0.05),
     0px 2px 10px 0px rgb(0 0 0 / 0.2),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
@@ -89,5 +94,6 @@ html {
     0px 30px 60px 0px rgb(0 0 0 / 0.26),
     inset 0px 0px 1px 0px rgb(255 255 255 / 0.15) !important;
   --hover-opacity: 0.9 !important;
+  --overlay-shadow: var(--app-shadow-md) !important;
 }
 

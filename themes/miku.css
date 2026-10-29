@@ -28,6 +28,7 @@
 
     /* --- HeroUI 变量覆盖 (透明度与颜色) --- */
     --background: transparent !important;
+    color-scheme: light !important;
     --titlebar-area-background: transparent !important;
 
     /* 内容层级背景 (高透设定) */
@@ -40,35 +41,40 @@
 
     /* 主色调应用 */
     --accent: hsl(var(--miku-cyan)) !important;
-    --accent-foreground: #ffffff !important;
+    --accent-foreground: var(--foreground) !important;
 
     /* 边框与分割线 (极细微的白色) */
     --border: rgba(255, 255, 255, 0.3) !important;
 
     /* 字体颜色 (深灰，保证在亮色玻璃上的可读性) */
-    --default: #1a1a1a !important;
+    --foreground: #1a1a1a !important;
+    --default: #e8f7f5 !important;
+    --default-foreground: var(--foreground) !important;
     --default-500: #4a5568 !important;
+    --field-background: rgb(var(--glass-base) / 0.7) !important;
+    --field-foreground: var(--foreground) !important;
+    --field-hover: rgb(var(--glass-base) / 0.85) !important;
+    --overlay: rgb(var(--glass-base) / 0.96) !important;
+    --surface-foreground: var(--foreground) !important;
+    --surface-secondary-foreground: var(--foreground) !important;
+    --surface-tertiary-foreground: var(--foreground) !important;
+    --overlay-foreground: var(--foreground) !important;
 }
 
 /* ==================================================================
       2. 全局背景与布局 (Global Background)
       ================================================================== */
-html,
-body {
+html:has(.main) {
     /* 使用上方定义的变量，方便替换 */
     background: var(--miku-bg-image) no-repeat center center fixed !important;
     background-size: cover !important;
-    background-color: transparent !important;
+    background-color: #eef9f8 !important;
     text-shadow: none !important;
     /* 清除默认文字阴影，保持干净 */
 }
 
 /* 强制根容器透明，让背景图透出来 */
-#root,
-.app,
-.w-full,
-.flex,
-.h-screen {
+body:has(.main) #root {
     background-color: transparent !important;
 }
 
@@ -86,8 +92,7 @@ body {
 
 /* 顶部标题栏 / 导航区 */
 .main .sticky,
-.main header,
-.main [data-slot="navbar"] {
+.main header {
     background-color: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(15px) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -97,10 +102,13 @@ body {
       4. 组件：侧边栏 (Miku Style Sidebar)
       ================================================================== */
 .side {
-    position: relative !important;
     background-color: rgba(255, 255, 255, 0.15) !important;
     backdrop-filter: blur(20px) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.side:not(.sider-rail) {
+    position: relative;
 }
 
 /* [细节] 右下角 "01" 水印 (致敬 CV01 纹身) */
@@ -163,9 +171,8 @@ body {
     z-index: 1 !important;
 }
 
-/* 确保选中卡片内的文字清晰 (黑色加粗) */
-.main .grid .bg-primary\/30 * {
-    color: #000000 !important;
+/* 加粗节点名称，保留测速按钮的状态颜色 */
+.main .grid .bg-primary\/30 .flag-emoji {
     font-weight: 600 !important;
 }
 
@@ -175,15 +182,16 @@ body {
 }
 
 /* 普通未选中卡片 */
-.bg-content1,
-.bg-content2 {
+.main .card:not(.bg-primary\/30):not(.bg-secondary\/30),
+.side .card:not(.bg-primary),
+.outbound-mode-card {
     background-color: rgba(255, 255, 255, 0.25) !important;
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.bg-content1:hover,
-.bg-content2:hover {
+.main .card:not(.bg-primary\/30):not(.bg-secondary\/30):hover,
+.side .card:not(.bg-primary):hover {
     background-color: rgba(255, 255, 255, 0.4) !important;
     border-color: hsl(var(--miku-cyan) / 0.4) !important;
 }
@@ -193,7 +201,7 @@ body {
       ================================================================== */
 
 /* 输入框样式 */
-[data-slot="input-wrapper"] {
+:is(.input, .input-group, .select__trigger) {
     background-color: rgba(255, 255, 255, 0.25) !important;
     border: 1px solid rgba(255, 255, 255, 0.4) !important;
     border-bottom: 2px solid rgba(57, 197, 187, 0.4) !important;
@@ -202,7 +210,7 @@ body {
 }
 
 /* 输入聚焦时的光晕效果 */
-[data-slot="input-wrapper"][data-focus="true"] {
+:is(.input, .input-group, .select__trigger):focus-within {
     background-color: rgba(255, 255, 255, 0.6) !important;
     border-color: rgba(255, 255, 255, 0.8) !important;
     border-bottom-color: transparent !important;
@@ -230,20 +238,15 @@ body {
       ================================================================== */
 
 /* 下拉菜单/弹窗 (不透明度稍高，防止看不清) */
-[data-slot="content"],
+:is(.select__popover, .dropdown__popover, .popover, .tooltip, .modal__dialog, .drawer__dialog, .alert-dialog__dialog),
 .driver-popover {
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: var(--overlay) !important;
     backdrop-filter: blur(30px) !important;
     border: 1px solid hsl(var(--miku-cyan) / 0.3) !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* 开关 (Switch) 样式微调 */
-label[data-selected="true"] .bg-default-200,
-label[data-selected="true"] .bg-default {
-    background-color: var(--accent) !important;
-}
-
-label[data-selected="true"] span {
-    color: #fff !important;
+.switch[data-selected="true"] .switch__thumb {
+    background-color: var(--accent-foreground) !important;
 }

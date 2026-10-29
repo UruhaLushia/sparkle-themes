@@ -8,12 +8,18 @@
   --default-200: hsl(218.57 13.73% 20%) !important;
   --surface: hsl(220 13.04% 18.04%) !important;
   --surface-secondary: hsl(217.5 13.11% 23.92%) !important;
+  --accent-foreground: hsl(0 0% 0%) !important;
+  --secondary-foreground: hsl(0 0% 0%) !important;
+  --danger-foreground: hsl(0 0% 0%) !important;
 }
 
 html {
   --accent: hsl(207.04 81.61% 65.88%) !important;
+  --accent-foreground: var(--foreground) !important;
   --secondary: hsl(186.67 46.96% 54.9%) !important;
+  --secondary-foreground: var(--foreground) !important;
   --success: hsl(94.86 38.14% 61.96%) !important;
   --warning: hsl(39.06 67.09% 69.02%) !important;
   --danger: hsl(355.34 65.17% 65.1%) !important;
+  --danger-foreground: var(--foreground) !important;
 }
